@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tariffs and delivery calculator — Northway Logistics</title>
+<meta name="description" content="Delivery tariffs by zone and speed, with an offline price calculator.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="top">
+    <a class="brand" href="index.html">Northway<span> Logistics</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="tariffs.html" aria-current="page">Tariffs</a>
+      <a href="documents.html">Documents</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Tariffs</h2>
+    <p class="lead">Base prices per shipment, in USD, before weight. Weight adds $1.20 per chargeable kilogram.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Zone</th><th>Economy (5–7 days)</th><th>Standard (2–4 days)</th><th>Express (next day)</th></tr></thead>
+      <tbody>
+        <tr><td>Within the city</td><td class="num">$4.80</td><td class="num">$6.00</td><td class="num">$10.20</td></tr>
+        <tr><td>Within the region</td><td class="num">$8.00</td><td class="num">$10.00</td><td class="num">$17.00</td></tr>
+        <tr><td>Nationwide</td><td class="num">$12.80</td><td class="num">$16.00</td><td class="num">$27.20</td></tr>
+        <tr><td>International</td><td class="num">$28.00</td><td class="num">$35.00</td><td class="num">$59.50</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Chargeable weight is the larger of the actual weight and the volumetric weight (length × width × height in cm ÷ 5000), minimum 1 kg.</p>
+
+    <form id="calc" class="calc" style="display:block">
+      <div class="row2" style="margin-top:0">
+        <label>Destination zone <select name="zone"></select></label>
+        <label>Service <select name="service"></select></label>
+      </div>
+      <div class="row2">
+        <label>Actual weight, kg <input name="weight" type="number" min="0" step="0.1" inputmode="decimal"></label>
+        <label>Length, cm <input name="l" type="number" min="0" step="1" inputmode="numeric"></label>
+        <label>Width, cm <input name="w" type="number" min="0" step="1" inputmode="numeric"></label>
+        <label>Height, cm <input name="h" type="number" min="0" step="1" inputmode="numeric"></label>
+      </div>
+    </form>
+
+    <div class="result" style="margin-top:20px">
+      <small>Estimated price</small>
+      <div class="price" id="estimate">—</div>
+      <small id="chargeable">Enter the weight to see an estimate.</small>
+    </div>
+    <p class="note">The calculator runs in the browser and needs no connection. Insurance and customs fees are not included.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Northway Logistics · Sample company site</span>
+    <span>+1 (555) 987-6543</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

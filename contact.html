@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request a quote — Northway Logistics</title>
+<meta name="description" content="Send the cargo details and get a fixed quote within one working day.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="top">
+    <a class="brand" href="index.html">Northway<span> Logistics</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="tariffs.html">Tariffs</a>
+      <a href="documents.html">Documents</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Request a quote</h2>
+    <p class="lead">Fill in the form. Press send, and Telegram opens with the request ready — confirm it there. We reply within one working day.</p>
+    <form id="request" style="max-width:640px">
+      <div class="row2">
+        <label>Your name <input name="name" required autocomplete="name"></label>
+        <label>Company <input name="company" autocomplete="organization"></label>
+      </div>
+      <label>Phone or email <input name="contact" required autocomplete="tel"></label>
+      <label>Service
+        <select name="service"></select>
+      </label>
+      <label>Cargo, route and dates <textarea name="message" placeholder="e.g. 3 pallets, 450 kg, Kyiv → Lviv, pick-up on Monday"></textarea></label>
+      <div><button class="btn" type="submit">Send request</button></div>
+      <p id="status" class="note" role="status"></p>
+    </form>
+
+    <div class="cards" style="margin-top:36px">
+      <div class="card"><h3>Phone</h3><p>+1 (555) 987-6543, Mon–Sat 8:00–20:00</p></div>
+      <div class="card"><h3>Head office</h3><p>48 Harbour Road, Unit 3</p></div>
+      <div class="card"><h3>Dispatch</h3><p>dispatch@example.com for pick-up changes</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Northway Logistics · Sample company site</span>
+    <span>+1 (555) 987-6543</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
